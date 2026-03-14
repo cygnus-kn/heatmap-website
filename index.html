@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="data.js"></script>
+    <script src="steps_data.js"></script>
     <style>
         :root {
             --bg-body: #0f111a;
@@ -293,7 +294,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 2rem;">
         <header>
             <div>
                 <h1>Daily Notes Heatmap</h1>
@@ -341,197 +342,222 @@
         </div>
     </div>
 
+
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>Daily Steps Heatmap</h1>
+                <div class="subtitle">Track your physical activity</div>
+            </div>
+            <div class="controls">
+                <select id="steps-year-selector"></select>
+            </div>
+        </header>
+
+        <div class="heatmap-wrapper">
+            <div class="day-labels">
+                <span class="day-label">Mon</span>
+                <span class="day-label">Tue</span>
+                <span class="day-label">Wed</span>
+                <span class="day-label">Thu</span>
+                <span class="day-label">Fri</span>
+                <span class="day-label">Sat</span>
+                <span class="day-label">Sun</span>
+            </div>
+            <div class="heatmap-container">
+                <div class="month-labels" id="steps-month-labels"></div>
+                <div class="heatmap" id="steps-heatmap"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="stats-group">
+                <div class="stat-item">Total steps: <strong id="steps-stat-total">0</strong></div>
+                <div class="stat-item">Days active: <strong id="steps-stat-days">0</strong></div>
+                <div class="stat-item">Max steps: <strong id="steps-stat-max">0</strong></div>
+            </div>
+            <div class="legend">
+                <span>Less</span>
+                <div class="legend-squares">
+                    <div class="square" data-level="0"></div>
+                    <div class="square" data-level="1"></div>
+                    <div class="square" data-level="2"></div>
+                    <div class="square" data-level="3"></div>
+                    <div class="square" data-level="4"></div>
+                    <div class="square" data-level="5"></div>
+                </div>
+                <span>More</span>
+            </div>
+        </div>
+    </div>
+
     <div class="tooltip" id="tooltip"></div>
 
     <script>
-        // heatmapData is loaded from data.js
-        const data = typeof heatmapData !== 'undefined' ? heatmapData : {};
-
-        // Parse available years from data
-        const dates = Object.keys(data).sort();
-        const years = [...new Set(dates.map(date => date.split('-')[0]))];
-        
-        const yearSelector = document.getElementById('year-selector');
-        const heatmapEl = document.getElementById('heatmap');
-        const monthLabelsEl = document.getElementById('month-labels');
         const tooltip = document.getElementById('tooltip');
-        
-        // Stats elements
-        const statTotal = document.getElementById('stat-total');
-        const statDays = document.getElementById('stat-days');
-        const statMax = document.getElementById('stat-max');
 
-        if (years.length === 0) {
-            const currentYear = new Date().getFullYear().toString();
-            years.push(currentYear);
-        }
-
-        years.reverse().forEach(year => {
-            const option = document.createElement('option');
-            option.value = year;
-            option.textContent = year;
-            yearSelector.appendChild(option);
-        });
-
-        yearSelector.addEventListener('change', (e) => {
-            renderHeatmap(e.target.value);
-        });
-
-        function renderHeatmap(year) {
-            heatmapEl.innerHTML = '';
-            monthLabelsEl.innerHTML = '';
+        function initHeatmap(data, selectorId, heatmapId, monthLabelsId, statTotalId, statDaysId, statMaxId, countLabel) {
+            const rawDates = Object.keys(data).sort();
+            const years = [...new Set(rawDates.map(date => date.split('-')[0]))];
             
-            // Gather data for this year
-            const yearData = {};
-            let maxCount = 0;
-            let totalWords = 0;
-            let daysActive = 0;
-            
-            for (const [date, info] of Object.entries(data)) {
-                if (date.startsWith(year)) {
-                    let count = typeof info === 'number' ? info : (info.count || 0);
-                    let title = typeof info === 'number' ? '' : (info.title || '');
-                    let path = typeof info === 'number' ? '' : (info.path || '');
-                    
-                    yearData[date] = { count, title, path };
-                    totalWords += count;
-                    daysActive++;
-                    if (count > maxCount) maxCount = count;
-                }
+            const selector = document.getElementById(selectorId);
+            const heatmapEl = document.getElementById(heatmapId);
+            const monthLabelsEl = document.getElementById(monthLabelsId);
+            const statTotal = document.getElementById(statTotalId);
+            const statDays = document.getElementById(statDaysId);
+            const statMax = document.getElementById(statMaxId);
+
+            if (years.length === 0) {
+                years.push(new Date().getFullYear().toString());
             }
 
-            statTotal.textContent = totalWords.toLocaleString();
-            statDays.textContent = daysActive;
-            statMax.textContent = maxCount.toLocaleString();
+            years.reverse().forEach(y => {
+                const opt = document.createElement('option');
+                opt.value = y;
+                opt.textContent = y;
+                selector.appendChild(opt);
+            });
 
-            // Calculate thresholds for dynamic coloring via percentiles
-            const counts = Object.values(yearData).map(d => d.count).filter(c => c > 0).sort((a,b) => a-b);
-            let q1=0, q2=0, q3=0, q4=0;
-            if (counts.length > 0) {
-                q1 = counts[Math.floor(counts.length * 0.20)] || 1;
-                q2 = counts[Math.floor(counts.length * 0.40)] || 1;
-                q3 = counts[Math.floor(counts.length * 0.60)] || 1;
-                q4 = counts[Math.floor(counts.length * 0.80)] || 1;
-            }
+            selector.addEventListener('change', (e) => {
+                render(e.target.value);
+            });
 
-            function getLevel(count) {
-                if (count === 0) return 0;
-                if (count <= q1) return 1;
-                if (count <= q2) return 2;
-                if (count <= q3) return 3;
-                if (count <= q4) return 4;
-                return 5;
-            }
-
-            const startDate = new Date(`${year}-01-01T00:00:00`);
-            const endDate = new Date(`${year}-12-31T00:00:00`);
-            
-            // Start of week offset (Monday = 0, Sunday = 6)
-            let startDay = startDate.getDay() - 1;
-            if (startDay === -1) startDay = 6;
-            
-            // Pad empty days at the beginning
-            for (let i = 0; i < startDay; i++) {
-                const emptySquare = document.createElement('div');
-                emptySquare.className = 'square';
-                emptySquare.style.visibility = 'hidden';
-                heatmapEl.appendChild(emptySquare);
-            }
-
-            let currentDate = new Date(startDate);
-            let colIndex = 0;
-            let currentMonth = -1;
-
-            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-            let delay = 0;
-
-            while (currentDate <= endDate) {
-                // Check if month changed
-                if (currentDate.getMonth() !== currentMonth) {
-                    currentMonth = currentDate.getMonth();
-                    
-                    // Add month label
-                    const monthLabel = document.createElement('span');
-                    monthLabel.className = 'month-label';
-                    monthLabel.textContent = months[currentMonth];
-                    // Calculate left position: colIndex * (squareSize + gap)
-                    // square size = 14px, gap = 4px
-                    monthLabel.style.left = `calc(${colIndex} * (var(--square-size) + var(--square-gap)))`;
-                    monthLabelsEl.appendChild(monthLabel);
-                }
-
-                const dateStr = currentDate.toISOString().split('T')[0];
-                const dateData = yearData[dateStr] || { count: 0, title: '', path: '' };
-                const count = dateData.count;
-                const noteTitle = dateData.title || dateStr;
-                const notePath = dateData.path || '';
-                const level = getLevel(count);
-
-                const square = document.createElement('div');
-                square.className = 'square';
-                square.setAttribute('data-level', level);
-                square.style.animationDelay = `${delay}s`;
+            function render(year) {
+                heatmapEl.innerHTML = '';
+                monthLabelsEl.innerHTML = '';
                 
-                if (count > 0 && notePath !== '') {
-                    square.addEventListener('click', () => {
-                        window.location.href = `note.html?file=${encodeURIComponent(notePath)}`;
+                const yearData = {};
+                let maxCount = 0;
+                let totalCount = 0;
+                let daysActive = 0;
+                
+                for (const [date, info] of Object.entries(data)) {
+                    if (date.startsWith(year)) {
+                        let count = typeof info === 'number' ? info : (info.count || 0);
+                        let title = typeof info === 'number' ? '' : (info.title || '');
+                        let path = typeof info === 'number' ? '' : (info.path || '');
+                        
+                        yearData[date] = { count, title, path };
+                        totalCount += count;
+                        daysActive++;
+                        if (count > maxCount) maxCount = count;
+                    }
+                }
+
+                statTotal.textContent = totalCount.toLocaleString();
+                statDays.textContent = daysActive;
+                statMax.textContent = maxCount.toLocaleString();
+
+                const counts = Object.values(yearData).map(d => d.count).filter(c => c > 0).sort((a,b) => a-b);
+                let q1=0, q2=0, q3=0, q4=0;
+                if (counts.length > 0) {
+                    q1 = counts[Math.floor(counts.length * 0.20)] || 1;
+                    q2 = counts[Math.floor(counts.length * 0.40)] || 1;
+                    q3 = counts[Math.floor(counts.length * 0.60)] || 1;
+                    q4 = counts[Math.floor(counts.length * 0.80)] || 1;
+                }
+
+                function getLevel(c) {
+                    if (c === 0) return 0;
+                    if (c <= q1) return 1;
+                    if (c <= q2) return 2;
+                    if (c <= q3) return 3;
+                    if (c <= q4) return 4;
+                    return 5;
+                }
+
+                const startDate = new Date(`${year}-01-01T00:00:00`);
+                const endDate = new Date(`${year}-12-31T00:00:00`);
+                
+                let startDay = startDate.getDay() - 1;
+                if (startDay === -1) startDay = 6;
+                
+                for (let i = 0; i < startDay; i++) {
+                    const emptySquare = document.createElement('div');
+                    emptySquare.className = 'square';
+                    emptySquare.style.visibility = 'hidden';
+                    heatmapEl.appendChild(emptySquare);
+                }
+
+                let currentDate = new Date(startDate);
+                let colIndex = 0;
+                let currentMonth = -1;
+                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                let delay = 0;
+
+                while (currentDate <= endDate) {
+                    if (currentDate.getMonth() !== currentMonth) {
+                        currentMonth = currentDate.getMonth();
+                        const monthLabel = document.createElement('span');
+                        monthLabel.className = 'month-label';
+                        monthLabel.textContent = months[currentMonth];
+                        monthLabel.style.left = `calc(${colIndex} * (var(--square-size) + var(--square-gap)))`;
+                        monthLabelsEl.appendChild(monthLabel);
+                    }
+
+                    const dateStr = currentDate.toISOString().split('T')[0];
+                    const dateData = yearData[dateStr] || { count: 0, title: '', path: '' };
+                    const count = dateData.count;
+                    const noteTitle = dateData.title || dateStr;
+                    const notePath = dateData.path || '';
+                    const level = getLevel(count);
+
+                    const square = document.createElement('div');
+                    square.className = 'square';
+                    square.setAttribute('data-level', level);
+                    square.style.animationDelay = `${delay}s`;
+                    
+                    if (count > 0 && notePath !== '') {
+                        square.addEventListener('click', () => {
+                            window.location.href = `note.html?file=${encodeURIComponent(notePath)}`;
+                        });
+                    }
+                    
+                    square.addEventListener('mouseenter', () => {
+                        const rect = square.getBoundingClientRect();
+                        const levelColors = {
+                            0: "var(--text-main)",
+                            1: "var(--color-l1)",
+                            2: "var(--color-l2)",
+                            3: "var(--color-l3)",
+                            4: "var(--color-l4)",
+                            5: "var(--color-l5)"
+                        };
+                        const countColor = levelColors[level];
+
+                        const text = count === 0 
+                            ? `No records on ${dateStr}`
+                            : (notePath !== '' ? `<div style="margin-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 4px; white-space: normal; max-width: 250px;"><strong>${noteTitle}</strong></div>` : '') + `<span class="count" style="color: ${countColor};">${count.toLocaleString()}</span> ${countLabel}`;
+                        
+                        tooltip.innerHTML = text;
+                        tooltip.classList.add('show');
+                        
+                        const topPos = rect.top + window.scrollY;
+                        const leftPos = rect.left + window.scrollX + (rect.width / 2);
+                        
+                        tooltip.style.left = `${leftPos}px`;
+                        tooltip.style.top = `${topPos}px`;
                     });
+
+                    square.addEventListener('mouseleave', () => {
+                        tooltip.classList.remove('show');
+                    });
+
+                    heatmapEl.appendChild(square);
+                    currentDate.setDate(currentDate.getDate() + 1);
+                    if (currentDate.getDay() === 1) colIndex++;
+                    delay += 0.001;
                 }
-                
-                // Tooltip interaction
-                square.addEventListener('mouseenter', (e) => {
-                    const rect = square.getBoundingClientRect();
-                    
-                    // Get color corresponding to the level
-                    const levelColors = {
-                        0: "var(--text-main)",
-                        1: "var(--color-l1)",
-                        2: "var(--color-l2)",
-                        3: "var(--color-l3)",
-                        4: "var(--color-l4)",
-                        5: "var(--color-l5)"
-                    };
-                    const countColor = levelColors[level];
-
-                    const text = count === 0 
-                        ? `No notes on ${dateStr}`
-                        : `<div style="margin-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 4px; white-space: normal; max-width: 250px;"><strong>${noteTitle}</strong></div><span class="count" style="color: ${countColor};">${count.toLocaleString()}</span> words`;
-                    
-                    tooltip.innerHTML = text;
-                    tooltip.classList.add('show');
-                    
-                    // Position tooltip above the square
-                    const topPos = rect.top + window.scrollY;
-                    const leftPos = rect.left + window.scrollX + (rect.width / 2);
-                    
-                    tooltip.style.left = `${leftPos}px`;
-                    tooltip.style.top = `${topPos}px`;
-                });
-
-                square.addEventListener('mouseleave', () => {
-                    tooltip.classList.remove('show');
-                });
-
-                heatmapEl.appendChild(square);
-
-                // Move to next day
-                currentDate.setDate(currentDate.getDate() + 1);
-                
-                // Increment column if it's the start of a new week (Monday = 1)
-                if (currentDate.getDay() === 1) {
-                    colIndex++;
-                }
-
-                delay += 0.001; // Staggered animation
             }
+            if (years.length > 0) render(years[0]);
         }
+        
+        const noteData = typeof heatmapData !== 'undefined' ? heatmapData : {};
+        const stepData = typeof stepsData !== 'undefined' ? stepsData : {};
 
-        // Initialize with default year
-        if (years.length > 0) {
-            renderHeatmap(years[0]);
-        }
-
-    </script>
+        initHeatmap(noteData, 'year-selector', 'heatmap', 'month-labels', 'stat-total', 'stat-days', 'stat-max', 'words');
+        initHeatmap(stepData, 'steps-year-selector', 'steps-heatmap', 'steps-month-labels', 'steps-stat-total', 'steps-stat-days', 'steps-stat-max', 'steps');
+</script>
 </body>
 </html>
