@@ -1,0 +1,8 @@
+I bought a magic mouse from Apple today. At first, I was really panic with what I perceived as a terrible purchase decision, but after some research and thinking, this mouse is actually not as bad as I initially thought. But it is still inferior to my previous non-Apple mouse of the same price. But saying that erases any nuances in the different things these mouse can do. The problem with Apple magic mouse is that it is too slow, I use both the mouse and the trackpad on my Macbook simultaneously and the different in speed makes it difficult to adjust. However, I can change it with some command line or a mouse application. But the one thing it got going for it is the variety of gesture and smooth scrolling, these are severely lacking from non-Apple product and understandingly so, that's the walled garden for you. But the downside is almost non-negotiable that it makes the revert to my old mouse tempting. As of for now I'll just try this new mouse for sometimes.
+
+To be honest, I haven't read a lot this week. This Saturday, my class will have a mock exam and I'll get to travel back to VT city for some break, hopefully, this week is less painful that it already have. Oh, yeah, This early morning, the water went our while I was having a terrible cramp and therefore, I was awake until 7am waiting for it to return. Then I overslept in the morning and got nothing done. After the class this evening, I also have to run a deadline for the google sites. All in all, not that good of a week. Hope is that it will get better.
+
+Oh, Next morning, I'll run to check on a phone that I'll buy. 
+
+---
+Previous day: [[(2024-03-26) TOEIC center removed the teacher room, meditation on writing]]

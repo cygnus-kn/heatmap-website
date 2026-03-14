@@ -1,0 +1,12 @@
+I thought, sometimes, that there is someone, some entity, some consciousness, sending people into my life just to mess with me. That they send would-be angels who looks and feels nice, warm and loving just for me to gradually peel them away to expose the deep and dark nature of their existence. That such entities keep sending those "angels" to teach me a lesson, of not entirely trusting a person, even if that person is supposedly the closest to your heart. 
+
+The worst part is that the "angels" themselves feels as if they are anything but their own perceived image of goodness and kind. That they care not but their own emotion and is unable to see the from the other's view. And I am in love with one of them. I suppose you want to teach me of how to let go, of how to stop believe in the capability of human to change or rather, my own dillusion that I can be the force that drive them to change. 
+
+I am, as thought by my own mind, the most pessimistic prophet of human nature and as the same time, the most optimistic believer in human's potential. Until now I cannot aligns those two schools of thought that reside within opposite end of my mind, looking at each other, whispering its wisdom, its propaganda, its assurance to my ear. 
+
+It is as if I can see the future with her right now, of me letting her down gently, and moving on. I am somehow attracted to the person that I will grow to hate the most, but it feels right when we are together, when we love each other, but the looming prospect of future's fractures was lurking within every silence moments between us. We were destined to fail, yet were also destined to meet each other, to fall in love, to argue, to make peace, to grow cold and distance, to finally say goodbye for good. 
+
+I, though physically exist in the present, have already lived through the future, though only in glimpses. It was like the movie that you like - The Arrivals, where the protagonist have seen through her own future, see her own happiness and sorrow, and choose to embrace it. Though the end is sad, the fact that I can spend time with you right now, or in any time thereafter, I would trade all of my yesterdays for it. I embrace your arrival in my life, I enjoy every moment when I am with you. I will be broken, to the very core of my existence when we eventually grow apart. But, for me, just for a moment, an instance, when I am with you, life makes sense, and that is enough.
+
+---
+pre: [[(2021-01-24) Tina's Letter]]

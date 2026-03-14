@@ -1,0 +1,12 @@
+The weather is sunny and windy today, with beautiful sunny sky in the afternoon. I think part of the feeling that Tet is coming is the combination of the sun light piercing through the window and the sound of howling wind blowing away. It's not that hot either, with a slight coolness in the morning and warmness in the afternoon when everything is soaked in the beautiful sunlight
+
+I sleep really late last night so my morning wasn't that good, my eyes was dry and my mind was wandering. Nevertheless, I manage to add som finishing touches the slide for Speaking and sleep a little in the afternoon.
+
+I also received the cheap Samsung phone and a storage box that I ordered couple of days ago, the box is small but I manage to squeeze in some English textbooks and notebooks into it. I was trying one out in order to see if I should order more for the rest of my stuff. Also, it takes some time to set up the new Samsung phone, it was slow but tolerable, there are bunch of bloatware but I uninstalled it all. And it acts as my bridge to the Samsung watch to monitor my health and sleep. So far, so good.
+
+I sleep until 4:00 p.m and upon seeing the beautiful we are having today, I ride my scooter to the kite-flying ground. Many people apparently have the same idea as mine, I saw more than usual the number of kites and it just looks stunning under the hazy sun light in the afternoon with the backdrop of the blue sky. I think there is some primordial instinct of human that releases dopamine when they see the open field with nice warm weather and blue sky or sth. But I only stop by briefly because my destination is actual the park right under Thu Thiem 2 bridge. It was a wonder green field full of glass and there are some young people sitting on it enjoying the weather. I took a load of picture nearby, each is beautiful as the last, I even took some video and sit for a while looking at some people training their eagle pet to fly. Then I took an under path to the other side of the park and and have a nice walk around, there's a stackbuck there with seats overlooking the river, some couples are taking picture and there's even a wedding photo op nearby. I came back with even more serotonin when I saw more people have arrive at the kite flying ground. 
+
+I think overall, it was a wonderfully refreshing and relaxing day and I saw potential of new running routes around. So I'll try to run there again once I have free time.
+
+---
+pre: [[(2026-01-19) An adventure with more problems than gains]]

@@ -309,9 +309,8 @@
                 dateEl.textContent = "Unknown Date";
             }
 
-            // 3. Fetch the content relative to the parent directory
-            // The Heatmap is in /Heatmap-Website/ and the root is just outside `../`
-            const fetchPath = '../' + fileParam;
+            // 3. Fetch the content from the local notes directory
+            const fetchPath = fileParam;
 
             fetch(fetchPath)
                 .then(response => {

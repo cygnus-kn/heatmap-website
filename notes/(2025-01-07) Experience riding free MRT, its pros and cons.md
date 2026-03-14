@@ -1,0 +1,8 @@
+I have been riding the MRT line to and from work for a while now andI find that it is the best public transport option considering my circumstance. There are connecting buses to and from my home but I have to take a hailing ride service from the arriving terminal to my work. Although it only cost around 15k to 16k per trip. So as of right now, I only need to pay 32k VND to get to my center. Of courses it will increase once the fare for metro and its connecting buses come to effect. Even then, it is still more economical and less time-consuming than taking hailing service all the way or only riding the bus. 
+
+Today, I take the MRT to the city center and take Bus 34 to another workplace in Dist. 7. Although the trip to the city center was pleasant, the Bus 34 was too old and it stinks of car smell so I got car sick while riding it. Was not a good experience so I would take a ride hailing service home.
+
+There are several other problems of public transport that I can see, one thing is the wait time, it is too unpredictable and there was no estimation of when the bus or the MRT arrive. This compounded the more connection you take. For example, I took the bus, then the MRT so there are two point at which I need to wait, and it could the the same time as the time it takes to arrive at the destination. Therefore negates any 
+
+---
+[[(2025-01-01) Good experience celebrating NYE w LW & plan for new year]]

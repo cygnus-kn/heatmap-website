@@ -1,0 +1,4 @@
+I took my bike to exploring the city this morning and find a delightful sights of people going about taking pictures for Tet holiday, it was really a vibrant scene rarely seen in this city, people were happily posing for photographs and it also intrigues some foreigners visiting. I headed to Ca Chep book story and find myself a window seat with awesome view of the road below. It was a good day I feel, was it not for my throat infection, it would be a perfect day. I'll try to read something for a while and try to finish some left-over work from last week. 
+
+---
+Previous day: [[(2024-01-06) Feeling unexpectedly positive, Tom Scott retired]]

@@ -1,0 +1,10 @@
+It's our national holiday today and I came back to VT city, it's a long holiday with 5 consecutive days off and a lot of people come to VT to take their vacation here. It's unusually hot now and plus the people, it somewhat unbearable, that's why I didn't come back to VT the first two days because those are the most crowded time. Now I am writing this besides the beach with the breeze flirting with my face, there are more people than usual but not by much, it feels much more pleasant. 
+
+I do intend to complete some works over the holiday, a plan that I have almost every holiday really. But it's likely not going to be as productive as I would think. Although I have transitioned to teaching for over a year now, the work hours are reduced but the work load feels somewhat the same. It's like the work spread out to meet with the time available. I am really behind some of the work for my 2 teaching centers. I do hope to have time to plan for future but that is a really difficult task considering that I am playing catch-up with the work haven't been done.
+
+That why I haven't been reading and writing as much. And the hot and humid weather is also a reason. I find that the weather do affect my mood to work more than I expected. I need to find a solution for it but for right now, it just finding a coffee shop to work in. 
+
+I am flirting with the idea of running in the moring if my circadian rhythm ever find a proper time again. There is this slow but steady march of weight gain due to my inactive lifestyle and the fact that I eat a lot. This with long-term project into actual health problem that I need to take seriously. I am planning to buy some sports clothes after getting my paycheck this month and start planing to running in Sala area. My calculation is that the parking ticket is only 5k, so that's a reasonable cost for a really nice place to run. As opposed to 300 - 1mil in a gym a month.
+
+---
+Previous day: [[(2024-04-04) Bought Apple Magic Mouse, unexpectedly good, haven't read a lot lately]]

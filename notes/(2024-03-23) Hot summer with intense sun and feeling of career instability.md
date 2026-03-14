@@ -1,0 +1,4 @@
+the weather has been hot, the kind of hotness of summer with some humidity amidst the air. The sky is turning wavy cloudy the more time goes on. But clear sky sunset is still around the corner. I haven't been to the kite flying vacant lot lately, although I really want to. Maybe because my laziness has engulfed every afternoon, under the pressure of intense sun. I also am thinking about buying something online, as a form of therapy. To be honest, I haven't bought any life improving gadget for a while now. Because of the instability of my profession, but soon when there are more classes and I feel like the financial situation is more stable, I'll try to buy expensive electronics soon.
+
+---
+Previous day: [[(2024-03-22) Beautiful view while driving and inflation of real-estate value, public road is the only public space left]]

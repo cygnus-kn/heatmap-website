@@ -1,0 +1,16 @@
+---
+{}
+---
+I've finished every blog post, every articles of interest, literally. The goal I set is "read one writing a day.", now there is no writing to read, I think I will create a section dedicated to long form writing such as books, I do have Immanuel Kant's Critique of Reasons and Hobbes' Leviathan as reading materials also. One opinion I have in my mind but has yet written out is that I moved away from reading books and lean toward reading blog posts is due to books having less information density. After having read several books in my youth, I found that the key insights in the majority of them can be boiled down to few paragraphs which worths few minutes of reading, instead of a whole featured tomb that takes several weeks to process. 
+
+Besides that, today is pretty typical if not outright boring. I have been playing EVE online too much, I find it addiction mainly because of the activity I do in-game being akin to gambling. It's exploration, you scan for signature and do the sites, sometimes it requires hacking other times fighting NPCs, but at the end of it there are loot ranging from utter dog shit to ultra-rare valuable worth hundred of millions of ISK (the in-game currency). The unpredictability of it, and the potential high ceiling of income is the perfect combination that hooks me to the game. 
+
+This week, I've read 15 articles, that is... too much, as in I can't meaningfully process all of them into personal knowledge, but I'll try anyway. There is an author whose post I internalized deeply, but cannot tell why it is, I know his style of writing is fundamentally different from others, but I can't verbalize how. One of his recent piece is about Taylor Swift, and how she doesn't exist (not really) but in a sense she doesn't ... it complicated. Taylor Swift, as interpreted in this blog post, is more of a position, a persona. A country needs a leader whether it's the general secretary, president, emperor. Those are titles, names and not the actual position itself, the position exist ontologically not physically. Taylor Swift also exists ontologically, a woman pop artist at the height of her career.
+
+>I do not think the incels can ever adequately describe their own condition, because their condition is a screen that obscures what’s really at stake. Similarly, I don’t think any Swiftie can ever hope to adequately understand their idol. Taylor Swift is the formless crisis of the present and the void over which all things are spun. But all they can do is talk about her music, and her boyfriends, and her costumes, and her hair: things that simply do not, in any meaningful sense, exist.
+
+If I have to throw a word to describe his style of writing, it's cathartic, psychotic, intoxicating, feverish. You don't know what kind of magic inscribed on these pages, but you certain feel it, you feel it as he does, and he - the author knows that you do. He plunges you into such depth of abstraction that once you're done reading, there is no telling what's real or what is fictional.
+
+---
+Source: https://samkriss.substack.com/p/taylor-swift-does-not-exist
+Previous day: [[(2023-11-30) More receptive  to different things (like circus show) and relationship between the writer and his audience]]

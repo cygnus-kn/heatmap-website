@@ -1,0 +1,10 @@
+I came back from VT today. Every time I come back, it feels more and more anxious, I am expected to accomplish more and more things now, making enough money to help my parents, they aren't young anymore. Getting married, they insisted on it, which only accelerated my anxiety level, I don't know if I am even financially stable to start a family, or even if I have enough time to maintain a relationship. It keeps plaguing me louder and louder.
+
+One of the goal that I set for myself this year was to lose weight by running or jogging (although I said that every year for the last 3 years), but I am marginally more serious and systematic about it now. I set out to find a new running path today, as I did several months ago. This time, I took the newly revised bus route 154 to nee city then walk along the newly built bicycle path to pandora apartment and took the under-bridge path to SALA luxurious apartment complex. It took me around 30 mins to do them, a little bit exhausting so I took a break on one of the benches to write this down.
+
+The trip home is more troublesome than expected since there is no direct connection between SALA and my place, I was ready to fully walk home for 1 and a half hour but I took the wrong bus 157 deep into Diamond Island, the fact that I don't have any 4G data also contributed greatly to my unfortunate circumstance. I had to walk back and during the way, my stomach cramp and I need to pee urgently, so I had to take Grab back home. Luckily, I arrived in time to relief myself. I think the experience that I draw from this is that bring a scooter, that right, just bring a scooter, no point riding public transportation because it's too dependent on the traffic and their schedule as well as their routes.
+
+I ended up walking for over 70 minutes with more than 9k steps, for some this is like nothing. What do you mean 9k? Bro, I commute to work 10k a day. To which I say, progress bro, progress.
+
+---
+pre: [[(2026-01-18) Back to Vung Tau and road construction despite directive from the government not to]]

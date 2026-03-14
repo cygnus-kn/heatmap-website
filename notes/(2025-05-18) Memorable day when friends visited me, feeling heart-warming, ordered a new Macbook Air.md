@@ -1,0 +1,24 @@
+- wake up at 8:20 a.m
+- somewhat not feeling rested, too many time waking up in the middle of the night last night.
+- deep sleep deficit
+- play some video games, watch some YT vids
+- lazy day
+- Had "Rice w/ chicken and soup" for lunch (11 a.m)
+- took a nap until 3 p.m
+- play some video game
+- friends suddenly came and visit
+- feeling heart-warming but a little bit annoyed
+- continued to play video game a bit
+- went to the kite-flying ground at around 6:30 p.m
+- went later than usual, windy, the sun is almost down
+- the crowd is as usual
+- Had "Pho Bo" for dinner at 6:30 p.m
+- played some more EVE online
+- went to cousin's place to hang out (8:20 p.m)
+- had some milk tea and talk
+- bought a Macbook Air M4
+- went for street food at night and eat "Ốc"
+- went home at 11:00 p.m
+
+---
+pre: [[(2025-05-17) Super busy teaching day and trying to go to bed early]]

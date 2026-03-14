@@ -1,0 +1,8 @@
+I started to clean out the kitchen counter today, as well as receiving the inductive stove, it's really dirty the cabinet under the kitchen since no one touches it in years. Naturally, it becomes a breeding ground for all kinds of creatures, from spider to cockroach to gecko eggs. Another the other compartment under the sink is super dam and humid. I think I need to have a few kilos of silica gel to draw out all of the moisture there. The kitchen top is no better, in direct path of the window, dust accumulated so thick that it takes me several scrubs to clean it out.
+
+Meanwhile, I also do the laundry in the morning but the weather turn really cloudy in the afternoon so I don't know if my clothes are going to be dry when I come back. I had a class at 6 p.m and free afterward so I went to 3 o'clock coffee shop. It has been a long time since I came back here, not since I had full-evening classes. It definitely got less crowded. Whereas in the past, there would be nearly no table available on the first floor past 8 p.m but now, there are plenty of space and it's nearly 10 p.m. One reason I think is partly because it's nearly Tet holiday so some students has returned back to their hometown, but I don't think it would explain 100% of the absent of people here. I also might be that this coffee shop is obsolete, people weren't coming because it's not social media attracting. That is, when people coming to a place purely due to how many likes their social media post at the place, and the competition has revved up.
+
+---
+pre: [[(2026-01-28) Downloading songs for my phone and S127 ended yesterday]]
+
+

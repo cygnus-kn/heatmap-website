@@ -1,0 +1,10 @@
+The teacher room has been renovated into a classroom and now that they are in use, I am no longer able to have a quiet room to sit in. So now, I'm in front with the receptionist. Today is a lazy day, I want to do something like preparing slides for tomorrow's lesson but all the time, I was glued to my laptop and YT. I am binge watching a aviation-focus channel about some airplanes accident, it was really drawing me into the story not gonna lie. But all the obligations was ignored essentially, the middle of the week is packed with classes and meeting so it wasn't a good decision to slacked off like this. 
+
+I have been reading this one writing piece on substack that talked about learning. And the author hit the mark with some opinion of his:
+
+>In itself, making the process explicit in this way has helped us spot limitations—like how I would start an essay before I had gathered my thoughts, and then get attached to what I had written in a way that made it hard to refine my thinking.
+
+This is exactly how I start my essay, this is way I internally know but cannot consciously bring myself to admit it. I am attached to my writing, and when I do I tend to not want to rewrite it, even thought it wasn't the best articulation of what I want to produce. Yes, I understand that when I started writing, my thought has only partially formed and I should spend sometimes rewriting it instead of just going on and on to no avail. And often times, I am unwilling to change the perspective that I've already had. This is why I have this crazy thought of a "parallel writing", where I display multiple version of the same thought and simultaneously write all of them to see which one develops into a coherence piece. But it would take an enormous amount of effort, that which I lack. Reading his piece, I realize that I do want to have someone with a problem trouble-shooting mindset to work with me. Someone that on the same level of intellectual ability, this is really difficult, not in this country.
+
+---
+Previous day: [[(2024-03-23) Hot summer with intense sun and feeling of career instability]]

@@ -1,0 +1,6 @@
+Another day another uhm.. day. I unexpectedly feel more positive these days, really don't know why. Still one of the OG creator of YT, Tom Scott has announce his, not retirement, but slowing down of uploading content, he used to upload high quality informational video every week but the upload schedule has not been kind to his personal life. So he's taking a break, every major YTber I knew is in the comment section, that's how you know that this is an important news. Today is really overcast with some chances of raining in the evening, it's also Saturday. 
+One thing I just realized recently that hold me back from doing things is that doing those things isn't efficient. Or in another word, it would be not optimal use of time to do things. It is a part of my procrastination problem on top of low energy, brain fog, distraction and crippling sense that the time I use is lost forever and I should just relax instead.
+I tend to continue with an activity when it's the highest value possible at that moment I am illogically obsessed with it, or it's a entertaining things to do. 
+
+---
+Previous day: [[(2024-01-03) Day-off without classes and joining CTE for English speaking]]

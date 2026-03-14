@@ -1,9 +1,15 @@
 import os
 import re
 import json
+import shutil
 
 OBSIDIAN_LOGS_DIR = "/Users/cygnus/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cygnus/1. Daily logs"
-OUTPUT_FILE = "/Users/cygnus/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cygnus/Heatmap-Website/data.js"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_FILE = os.path.join(BASE_DIR, "data.js")
+NOTES_DEST_DIR = os.path.join(BASE_DIR, "notes")
+
+if not os.path.exists(NOTES_DEST_DIR):
+    os.makedirs(NOTES_DEST_DIR)
 
 heatmap_data = {}
 
@@ -19,8 +25,10 @@ for root, _, files in os.walk(OBSIDIAN_LOGS_DIR):
                     title_str = title_str[1:].strip()
                 
                 filepath = os.path.join(root, filename)
-                vault_root = "/Users/cygnus/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cygnus"
-                rel_path = os.path.relpath(filepath, vault_root)
+                
+                dest_filename = filename
+                dest_filepath = os.path.join(NOTES_DEST_DIR, dest_filename)
+                rel_path = f"notes/{dest_filename}"
 
                 try:
                     with open(filepath, "r", encoding="utf-8") as f:
@@ -33,6 +41,10 @@ for root, _, files in os.walk(OBSIDIAN_LOGS_DIR):
                         "title": title_str,
                         "path": rel_path
                     }
+                    
+                    # Copy file to notes directory
+                    shutil.copy2(filepath, dest_filepath)
+                    
                 except Exception as e:
                     print(f"Error reading {filepath}: {e}")
 
