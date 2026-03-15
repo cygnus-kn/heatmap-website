@@ -1,0 +1,10 @@
+I had a great sleep yesterday, earlier than usually at 1:45 a.m but still late by the standard of my age. I cooked some left over fish and buy a new whole one from the same vender. One thing I would not do again was coating frying batter on to my fish because it would just lead to more browning parts that coat the bottom of my pan and the fish piece looked more burnt than usual. Also, based on the experience of cooking for the last few days, apparently, I should only put the heat at 500-700 W as higher level will cause intense sizzling and fast browning. 
+
+Today, I fried chicken and oh boy was that a mistake, the oil spatter more than usual and I try to add some sauce to the chicken midway cooking but the heat made it stick to the pan, so at the end, there was huge spot of browning and I had to scrub it hard to get it all out in the sink, also the chicken doesn't retain much of the flavor from the sauce. I think next time, I would cook the chicken raw without any seasoning, and then low the heat to the minimum then add sauce or butter in.
+
+In the afternoon, the sky rumbled and rain was approaching, the first 90% of my commute was without a hitch but as I approached my workplace, it started to rain so I had to put on a raincoat, it rained sporadically, showering on some parts but pouring down heavy in other. I managed to arrive without being completely drenched in the rain, but I mistakenly thought that it would take longer for the rain to ram up, I decided to walk to a mini-mart to buy some food, but it was quickly pouring down so by the time I went back with my one cup of ginger-flavor tofu, my jacket was soaked. 
+
+Tomorrow, I think I'm cooking some fish my parents packed for me and use some of the shrimp to cook amaranth soup.
+
+---
+pre: [[(2026-03-11) Stay up too late and somewhat successful cream sauce cooking]]

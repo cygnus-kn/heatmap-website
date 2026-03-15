@@ -1,0 +1,8 @@
+I went to ACX meetup this morning and had a long discussion many topics from 10:30 am to nearly 3 p.m. Some of the topics that stand out for me is how do criminals and user of criminal's products (crack or alcohol) come to recognize each other and avoid undercover cops who would pose as one of their own. They would basically look for an increasingly more convincing characteristics from the opposite party and gradually confirm their actual needs as some who addicted to crack or they are actually a drug dealer and not a narc. From characteristic like "interested in using it" to "belong to a specific group of people" to "willing to do harmful thing to get money to buy a product"
+
+Another topic we touched was how the Confederation of Buddhism in Vietnam work, how do you open a pagoda and how they are operated as a business, after all Xiaolin's monk own billions of dollars and several mansions because of the spiritual business.
+
+I had a good nap in the afternoon since I started so late at around 4 p.m. I was intending to join of the English club around but I figure it's too late for that since I woke up at 6:45 p.m, so I decided to go to MM Market to buy some stuff for next week. I didn't buy any vegetables or fruits though because it will get crushed in the bag on the way home, but also, I don't a clear picture of what kind of vegetables dishes I will cook next week, but I'll definitely do one, something like a salad or stir-fried veggie.
+
+---
+pre: [[(2026-03-14) Another experience cooking fish and diving into making website again]]

@@ -14,10 +14,20 @@ const heatmapData = {
     "title": "Sore throat developing further, created some cool mashup today",
     "path": "notes/(2026-01-12) Sore throat developing further, created some cool mashup today.md"
   },
+  "2026-03-14": {
+    "count": 423,
+    "title": "Another experience cooking fish and diving into making website again",
+    "path": "notes/(2026-03-14) Another experience cooking fish and diving into making website again.md"
+  },
   "2026-02-11": {
     "count": 561,
     "title": "Problem with abdominal pain leads to ER visit and return home on motorbike at night with heavy rain",
     "path": "notes/(2026-02-11) Problem with abdominal pain leads to ER visit and return home on motorbike at night with heavy rain.md"
+  },
+  "2026-03-13": {
+    "count": 358,
+    "title": "Great sleep yesterday and more experience cooking",
+    "path": "notes/(2026-03-13) Great sleep yesterday and more experience cooking.md"
   },
   "2026-01-26": {
     "count": 602,
@@ -89,6 +99,11 @@ const heatmapData = {
     "title": "Cleaning the kitchen counter and continue to download music",
     "path": "notes/(2026-01-29) Cleaning the kitchen counter and continue to download music.md"
   },
+  "2026-03-11": {
+    "count": 328,
+    "title": "Stay up too late and somewhat successful cream sauce cooking",
+    "path": "notes/(2026-03-11) Stay up too late and somewhat successful cream sauce cooking.md"
+  },
   "2026-01-28": {
     "count": 282,
     "title": "Downloading songs for my phone and S127 ended yesterday",
@@ -124,6 +139,11 @@ const heatmapData = {
     "title": "Last day in HCMC before returning to VT with many flower displays set up",
     "path": "notes/(2026-02-10) Last day in HCMC before returning to VT with many flower displays set up.md"
   },
+  "2026-03-15": {
+    "count": 287,
+    "title": "ACX meetup in the morning till afternoon with many taboo topics",
+    "path": "notes/(2026-03-15) ACX meetup in the morning till afternoon with many taboo topics.md"
+  },
   "2026-01-21": {
     "count": 473,
     "title": "Receiving the Samsung phone and a wonderful wander to the Park under Thu Thiem 2 bridge",
@@ -153,6 +173,11 @@ const heatmapData = {
     "count": 388,
     "title": "An adventure with more problems than gains",
     "path": "notes/(2026-01-19) An adventure with more problems than gains.md"
+  },
+  "2026-03-10": {
+    "count": 323,
+    "title": "History VN-Index drop and gas prices rises sharply",
+    "path": "notes/(2026-03-10) History VN-Index drop and gas prices rises sharply.md"
   },
   "2026-02-08": {
     "count": 587,
