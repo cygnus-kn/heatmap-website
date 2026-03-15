@@ -26,6 +26,13 @@
             --color-l4: #e879f9; /* Light Pink-Purple */
             --color-l5: #c026d3; /* Dark Magenta / Pink-Purple */
 
+            /* Steps Heatmap Colors (Cyan to Purple) */
+            --steps-color-l1: #bcf2ec; /* Lightest Cyan */
+            --steps-color-l2: #5fdfd1; /* Lighter Cyan */
+            --steps-color-l3: #00d8c1; /* Cyan - Under 6000 */
+            --steps-color-l4: #b095f9; /* Lighter Purple - Over 6000 */
+            --steps-color-l5: #7e4df7; /* Darker Purple - Over 8000 */
+
             --square-size: 14px;
             --square-gap: 4px;
         }
@@ -86,6 +93,13 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
+        }
+
+        #steps-h1 {
+            background: linear-gradient(135deg, #00d8c1, #956ef8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
@@ -208,6 +222,12 @@
         .square[data-level="3"] { background-color: var(--color-l3); border-color: rgba(6, 78, 59, 0.5); }
         .square[data-level="4"] { background-color: var(--color-l4); border-color: rgba(232, 121, 249, 0.5); }
         .square[data-level="5"] { background-color: var(--color-l5); border-color: rgba(192, 38, 211, 0.8); box-shadow: 0 0 10px rgba(192, 38, 211, 0.4); }
+
+        #steps-heatmap .square[data-level="1"], #steps-legend .square[data-level="1"] { background-color: var(--steps-color-l1); border-color: rgba(188, 242, 236, 0.5); }
+        #steps-heatmap .square[data-level="2"], #steps-legend .square[data-level="2"] { background-color: var(--steps-color-l2); border-color: rgba(95, 223, 209, 0.5); }
+        #steps-heatmap .square[data-level="3"], #steps-legend .square[data-level="3"] { background-color: var(--steps-color-l3); border-color: rgba(0, 216, 193, 0.5); }
+        #steps-heatmap .square[data-level="4"], #steps-legend .square[data-level="4"] { background-color: var(--steps-color-l4); border-color: rgba(176, 149, 249, 0.5); }
+        #steps-heatmap .square[data-level="5"], #steps-legend .square[data-level="5"] { background-color: var(--steps-color-l5); border-color: rgba(126, 77, 247, 0.8); box-shadow: 0 0 10px rgba(126, 77, 247, 0.4); }
 
         .square:hover {
             transform: scale(1.3);
@@ -347,7 +367,7 @@
     <div class="container">
         <header>
             <div>
-                <h1>Daily Steps Heatmap</h1>
+                <h1 id="steps-h1">Daily Steps Heatmap</h1>
                 <div class="subtitle">Track your physical activity</div>
             </div>
             <div class="controls">
@@ -375,11 +395,11 @@
             <div class="stats-group">
                 <div class="stat-item">Total steps: <strong id="steps-stat-total">0</strong></div>
                 <div class="stat-item">Days active: <strong id="steps-stat-days">0</strong></div>
-                <div class="stat-item">Max steps: <strong id="steps-stat-max">0</strong></div>
+                <div class="stat-item">Average steps: <strong id="steps-stat-max">0</strong></div>
             </div>
             <div class="legend">
                 <span>Less</span>
-                <div class="legend-squares">
+                <div class="legend-squares" id="steps-legend">
                     <div class="square" data-level="0"></div>
                     <div class="square" data-level="1"></div>
                     <div class="square" data-level="2"></div>
@@ -397,7 +417,7 @@
     <script>
         const tooltip = document.getElementById('tooltip');
 
-        function initHeatmap(data, selectorId, heatmapId, monthLabelsId, statTotalId, statDaysId, statMaxId, countLabel) {
+        function initHeatmap(data, selectorId, heatmapId, monthLabelsId, statTotalId, statDaysId, statMaxId, countLabel, themePrefix = '--color-l', statMode = 'max', customThresholds = null) {
             const rawDates = Object.keys(data).sort();
             const years = [...new Set(rawDates.map(date => date.split('-')[0]))];
             
@@ -445,9 +465,10 @@
                     }
                 }
 
+                let avgCount = daysActive > 0 ? Math.round(totalCount / daysActive) : 0;
                 statTotal.textContent = totalCount.toLocaleString();
                 statDays.textContent = daysActive;
-                statMax.textContent = maxCount.toLocaleString();
+                statMax.textContent = (statMode === 'avg' ? avgCount : maxCount).toLocaleString();
 
                 const counts = Object.values(yearData).map(d => d.count).filter(c => c > 0).sort((a,b) => a-b);
                 let q1=0, q2=0, q3=0, q4=0;
@@ -460,6 +481,12 @@
 
                 function getLevel(c) {
                     if (c === 0) return 0;
+                    if (customThresholds) {
+                        for (let i = customThresholds.length - 1; i >= 0; i--) {
+                            if (c >= customThresholds[i]) return i + 2;
+                        }
+                        return 1;
+                    }
                     if (c <= q1) return 1;
                     if (c <= q2) return 2;
                     if (c <= q3) return 3;
@@ -518,11 +545,11 @@
                         const rect = square.getBoundingClientRect();
                         const levelColors = {
                             0: "var(--text-main)",
-                            1: "var(--color-l1)",
-                            2: "var(--color-l2)",
-                            3: "var(--color-l3)",
-                            4: "var(--color-l4)",
-                            5: "var(--color-l5)"
+                            1: `var(${themePrefix}1)`,
+                            2: `var(${themePrefix}2)`,
+                            3: `var(${themePrefix}3)`,
+                            4: `var(${themePrefix}4)`,
+                            5: `var(${themePrefix}5)`
                         };
                         const countColor = levelColors[level];
 
@@ -556,8 +583,8 @@
         const noteData = typeof heatmapData !== 'undefined' ? heatmapData : {};
         const stepData = typeof stepsData !== 'undefined' ? stepsData : {};
 
-        initHeatmap(noteData, 'year-selector', 'heatmap', 'month-labels', 'stat-total', 'stat-days', 'stat-max', 'words');
-        initHeatmap(stepData, 'steps-year-selector', 'steps-heatmap', 'steps-month-labels', 'steps-stat-total', 'steps-stat-days', 'steps-stat-max', 'steps');
+        initHeatmap(noteData, 'year-selector', 'heatmap', 'month-labels', 'stat-total', 'stat-days', 'stat-max', 'words', '--color-l', 'max');
+        initHeatmap(stepData, 'steps-year-selector', 'steps-heatmap', 'steps-month-labels', 'steps-stat-total', 'steps-stat-days', 'steps-stat-max', 'steps', '--steps-color-l', 'avg', [2000, 4000, 6000, 8000]);
 </script>
 </body>
 </html>

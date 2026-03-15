@@ -41,7 +41,7 @@ steps_container_html = """
     <div class="container">
         <header>
             <div>
-                <h1>Daily Steps Heatmap</h1>
+                <h1 id="steps-h1">Daily Steps Heatmap</h1>
                 <div class="subtitle">Track your physical activity</div>
             </div>
             <div class="controls">
@@ -69,11 +69,11 @@ steps_container_html = """
             <div class="stats-group">
                 <div class="stat-item">Total steps: <strong id="steps-stat-total">0</strong></div>
                 <div class="stat-item">Days active: <strong id="steps-stat-days">0</strong></div>
-                <div class="stat-item">Max steps: <strong id="steps-stat-max">0</strong></div>
+                <div class="stat-item">Average steps: <strong id="steps-stat-max">0</strong></div>
             </div>
             <div class="legend">
                 <span>Less</span>
-                <div class="legend-squares">
+                <div class="legend-squares" id="steps-legend">
                     <div class="square" data-level="0"></div>
                     <div class="square" data-level="1"></div>
                     <div class="square" data-level="2"></div>
@@ -94,7 +94,7 @@ end_script = html.rfind('</script>')
 new_script = """
         const tooltip = document.getElementById('tooltip');
 
-        function initHeatmap(data, selectorId, heatmapId, monthLabelsId, statTotalId, statDaysId, statMaxId, countLabel) {
+        function initHeatmap(data, selectorId, heatmapId, monthLabelsId, statTotalId, statDaysId, statMaxId, countLabel, themePrefix = '--color-l', statMode = 'max', customThresholds = null) {
             const rawDates = Object.keys(data).sort();
             const years = [...new Set(rawDates.map(date => date.split('-')[0]))];
             
@@ -142,9 +142,10 @@ new_script = """
                     }
                 }
 
+                let avgCount = daysActive > 0 ? Math.round(totalCount / daysActive) : 0;
                 statTotal.textContent = totalCount.toLocaleString();
                 statDays.textContent = daysActive;
-                statMax.textContent = maxCount.toLocaleString();
+                statMax.textContent = (statMode === 'avg' ? avgCount : maxCount).toLocaleString();
 
                 const counts = Object.values(yearData).map(d => d.count).filter(c => c > 0).sort((a,b) => a-b);
                 let q1=0, q2=0, q3=0, q4=0;
@@ -157,6 +158,12 @@ new_script = """
 
                 function getLevel(c) {
                     if (c === 0) return 0;
+                    if (customThresholds) {
+                        for (let i = customThresholds.length - 1; i >= 0; i--) {
+                            if (c >= customThresholds[i]) return i + 2;
+                        }
+                        return 1;
+                    }
                     if (c <= q1) return 1;
                     if (c <= q2) return 2;
                     if (c <= q3) return 3;
@@ -215,11 +222,11 @@ new_script = """
                         const rect = square.getBoundingClientRect();
                         const levelColors = {
                             0: "var(--text-main)",
-                            1: "var(--color-l1)",
-                            2: "var(--color-l2)",
-                            3: "var(--color-l3)",
-                            4: "var(--color-l4)",
-                            5: "var(--color-l5)"
+                            1: `var(${themePrefix}1)`,
+                            2: `var(${themePrefix}2)`,
+                            3: `var(${themePrefix}3)`,
+                            4: `var(${themePrefix}4)`,
+                            5: `var(${themePrefix}5)`
                         };
                         const countColor = levelColors[level];
 
@@ -253,8 +260,8 @@ new_script = """
         const noteData = typeof heatmapData !== 'undefined' ? heatmapData : {};
         const stepData = typeof stepsData !== 'undefined' ? stepsData : {};
 
-        initHeatmap(noteData, 'year-selector', 'heatmap', 'month-labels', 'stat-total', 'stat-days', 'stat-max', 'words');
-        initHeatmap(stepData, 'steps-year-selector', 'steps-heatmap', 'steps-month-labels', 'steps-stat-total', 'steps-stat-days', 'steps-stat-max', 'steps');
+        initHeatmap(noteData, 'year-selector', 'heatmap', 'month-labels', 'stat-total', 'stat-days', 'stat-max', 'words', '--color-l', 'max');
+        initHeatmap(stepData, 'steps-year-selector', 'steps-heatmap', 'steps-month-labels', 'steps-stat-total', 'steps-stat-days', 'steps-stat-max', 'steps', '--steps-color-l', 'avg', [2000, 4000, 6000, 8000]);
 """
 html = html[:start_script] + new_script + html[end_script:]
 

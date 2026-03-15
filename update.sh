@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 
 # Run the python script to update data.js
-python3 build.py
+python3 build_notes.py
 
 # Run the python script to update steps_data.js
 python3 build_steps.py
