@@ -2,7 +2,7 @@ import json
 import sqlite3
 
 # Extract step count data
-db_path = "/Users/cygnus/Documents/GitHub/Sleep-Data/health_connect_export.db"
+db_path = "/Users/cygnus/Documents/GitHub/heatmap-website/health_connect_export.db"
 out_path = "/Users/cygnus/Documents/GitHub/heatmap-website/steps_data.js"
 
 conn = sqlite3.connect(db_path)

@@ -1,0 +1,13 @@
+# Google Drive API secrets (DO NOT commit these!)
+credentials.json
+client_secret_*.json
+token.json
+
+# Python virtual environment
+.venv/
+
+# Health Connect database
+*.db
+
+# macOS
+.DS_Store
