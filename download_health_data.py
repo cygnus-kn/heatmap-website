@@ -27,7 +27,7 @@ CREDENTIALS_FILE = os.path.join(SCRIPT_DIR, "client_secret_961539101876-klnabcbj
 TOKEN_FILE = os.path.join(SCRIPT_DIR, "token.json")
 
 # Where to extract the .db file
-DB_OUTPUT_PATH = "/Users/cygnus/Documents/GitHub/Sleep-Data/health_connect_export.db"
+DB_OUTPUT_PATH = os.path.join(SCRIPT_DIR, "health_connect_export.db")
 
 # Search query — finds the most recent Health Connect zip in your Drive
 # Adjust the filename pattern if your export has a different name
