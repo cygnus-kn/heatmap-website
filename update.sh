@@ -10,13 +10,10 @@ else
     PYTHON_CMD="python3"
 fi
 
-# 1. Download latest Health Connect data
-$PYTHON_CMD download_health_data.py
-
-# 2. Run the python script to update data.js (from Obsidian notes)
+# 1. Run the python script to update data.js (from Obsidian notes)
 $PYTHON_CMD build_notes.py
 
-# 3. Run the python script to update steps_data.js (from the .db)
+# 2. Run the python script to update steps_data.js (from the .db)
 $PYTHON_CMD build_steps.py
 
 # 4. Check for changes and commit/push if needed
