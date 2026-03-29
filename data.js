@@ -69,6 +69,11 @@ const heatmapData = {
     "title": "Recovering from sore throat",
     "path": "notes/(2026-01-14) Recovering from sore throat.md"
   },
+  "2026-03-16": {
+    "count": 480,
+    "title": "Cooking fish getting better and odd season rain again",
+    "path": "notes/(2026-03-16) Cooking fish getting better and odd season rain again.md"
+  },
   "2026-02-12": {
     "count": 150,
     "title": "Starting one piece of the investment plan today",
@@ -174,6 +179,11 @@ const heatmapData = {
     "title": "An adventure with more problems than gains",
     "path": "notes/(2026-01-19) An adventure with more problems than gains.md"
   },
+  "2026-03-19": {
+    "count": 661,
+    "title": "Cooking again with some success and walked in the evening 3k steps",
+    "path": "notes/(2026-03-19) Cooking again with some success and walked in the evening 3k steps.md"
+  },
   "2026-03-10": {
     "count": 323,
     "title": "History VN-Index drop and gas prices rises sharply",
@@ -193,6 +203,11 @@ const heatmapData = {
     "count": 512,
     "title": "More cooking problem arises and first day back to work",
     "path": "notes/(2026-03-02) More cooking problem arises and first day back to work.md"
+  },
+  "2026-03-22": {
+    "count": 787,
+    "title": "Got addicted to vibe coding, meetup ACX yesterday, went to an English club today",
+    "path": "notes/(2026-03-22) Got addicted to vibe coding, meetup ACX yesterday, went to an English club today.md"
   },
   "2026-01-03": {
     "count": 263,
@@ -253,6 +268,11 @@ const heatmapData = {
     "count": 168,
     "title": "Feeling productive in the morning and went to the kite-flying ground to relax again",
     "path": "notes/(2026-01-16) Feeling productive in the morning and went to the kite-flying ground to relax again.md"
+  },
+  "2026-03-17": {
+    "count": 668,
+    "title": "Cooking stir-fried beef and fried chicken and went to Thu Thiem 2 park in the afternoon",
+    "path": "notes/(2026-03-17) Cooking stir-fried beef and fried chicken and went to Thu Thiem 2 park in the afternoon.md"
   },
   "2026-03-04": {
     "count": 362,
